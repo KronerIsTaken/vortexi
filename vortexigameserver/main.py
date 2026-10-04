@@ -25,6 +25,7 @@ import platform
 if platform.system() == "Linux":
     from linux_compat import MockRegistry as winreg, MockWin32GUI as win32gui, MockWin32Con as win32con
 else:
+    import sys
     import win32gui
     import win32con
     import winreg
